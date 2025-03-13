@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,32 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				nature: {
+					50: '#f0f9f1',
+					100: '#dcf1e0',
+					200: '#bbe3c3',
+					300: '#8dcf9f',
+					400: '#5db676',
+					500: '#3c9a57',
+					600: '#2e7d45',
+					700: '#266339',
+					800: '#22502f',
+					900: '#1e4229',
+					950: '#0e2415',
+				},
+				sea: {
+					50: '#f0f9ff',
+					100: '#e0f2fe',
+					200: '#b9e5fe',
+					300: '#7cd3fd',
+					400: '#36bbfa',
+					500: '#0ca2eb',
+					600: '#0083ca',
+					700: '#0168a4',
+					800: '#065786',
+					900: '#0b4a71',
+					950: '#082f4b',
 				}
 			},
 			borderRadius: {
@@ -70,25 +97,41 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'slide-down': {
+					'0%': { transform: 'translateY(-10px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-out': 'fade-out 0.5s ease-out',
+				'slide-up': 'slide-up 0.4s ease-out',
+				'slide-down': 'slide-down 0.4s ease-out'
+			},
+			fontFamily: {
+				sans: ['Inter var', 'sans-serif'],
+				serif: ['Merriweather', 'serif']
 			}
 		}
 	},
